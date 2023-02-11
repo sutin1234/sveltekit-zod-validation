@@ -1,6 +1,6 @@
 <script type="ts">
-	import type { ActionData } from './$types';
 	import { enhance } from '$app/forms';
+	import type { ActionData } from './$types';
 	export let form: ActionData;
 </script>
 
@@ -10,8 +10,11 @@
 		{#if form?.error}
 			<ul class="notice-error">
 				{#each form.errors as error}
-					{JSON.stringify(error)}
-					<li>{error.message}</li>
+					<li class="text-red-500">
+						<p>
+							{error.field}: {error.message}
+						</p>
+					</li>
 				{/each}
 			</ul>
 		{/if}
