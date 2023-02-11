@@ -6,4 +6,4 @@
 
 # pnpm
 pnpm exec lint-staged
-pnpm format && pnpm lint && git add .
+pnpm format && pnpm lint && git add . && git commit -m "add updated code" && git push
