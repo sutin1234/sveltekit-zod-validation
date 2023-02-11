@@ -6,3 +6,4 @@
 
 # pnpm
 pnpm exec lint-staged
+pnpm format && pnpm lint && git add .
